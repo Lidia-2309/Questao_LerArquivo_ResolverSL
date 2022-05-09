@@ -166,8 +166,8 @@ void Metodo_GaussSeidel()
   }
 
   printf("\n\n============RESOLUCAO DO SL METODO DE GAUSS-SEIDEL=============");
-  printf("\n\n° Numero de iterações realizadas: %d\n", interacoes);
-  printf("\n° Solucao encontrada:\n");
+  printf("\n\n-- Numero de iteracoes realizadas: %d\n", interacoes);
+  printf("\n-- Solucao encontrada:\n");
   for (i = 0; i < var; i++)
   {
     printf("x%d: %f; ", i + 1, valores_linha_pivo[i]);
@@ -192,9 +192,6 @@ int main(int argc, char *argv[])
       Metodo_GaussSeidel();
       break;
 
-    default:
-      printf("Comando inválido!\n");
-      break;
     }
-  } while (1);
+  } while (input=='S');
 }
